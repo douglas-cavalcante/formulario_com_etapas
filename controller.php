@@ -1,12 +1,11 @@
 <?php
-
 ob_start();
 session_start();
 //filtro os dados enviados pela requisição ajax
 $postData = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 $action = $postData['action'] ?? 'no-parametrized';
 //destrói o unset
-unset($postData['action']);
+ unset($postData['action']);
 
 //verifica se existe valores 
 if(!empty($postData['formSerialize'])){
@@ -21,15 +20,15 @@ switch($action){
 
   case "data-user":
     if(empty($postData['user_document'])){
-        $json['error'] = true;
-        $json['errorMessage'] = 'Por favor, informe seu cpf';
-        break;
+      $json['error'] = true;
+      $json['errorMessage'] = 'Por favor, informe seu cpf';
+      break;
     }
     $read->read('users','WHERE user_document = :document',"document={$postData['user_document']}");
     if($read->getResult()) {
-        $json['error'] = true;
-        $json['errorMessage'] = 'Cpf já sendo usado';
-        break;
+      $json['error'] = true;
+      $json['errorMessage'] = 'Cpf já sendo usado';
+      break;
     }
     //$json = $postData;
     $_SESSION['wizard']['user_name'] = $postData['user_document'];
@@ -90,5 +89,4 @@ switch($action){
   }
 
 echo json_encode($json);
-
 ob_end_flush();

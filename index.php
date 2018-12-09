@@ -48,7 +48,7 @@
 
                 </form>
 
-            </div>
+              </div>
 
             <div class="data-login form-step" style="display:none">
 
