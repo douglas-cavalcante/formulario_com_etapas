@@ -92,7 +92,7 @@
                     </div>
 
                     <div class="form-group">
-                        <a class="btn btn_blue" data-step="dataUser">&laquo; Anterior</a>
+                        <a class="btn btn_blue" data-step="data-login">&laquo; Anterior</a>
                         <button class="btn btn_blue">&check; Finalizar Cadastro</button>
                     </div>
 

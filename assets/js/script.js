@@ -1,5 +1,5 @@
 $(function(){
-
+  
   //form-wizard é meu seletor para manipular o formulário
   function step(button){
     $('.form-step:visible').fadeOut(200, function(){
@@ -32,6 +32,10 @@ $(function(){
       if(data.success === true) {
         //oculto o atual e exibe a próxima seção
         step(formButton);
+      }
+
+      if(data.finish === true) {
+        window.location.href = data.redirect;
       }
     }, 'json');
 
