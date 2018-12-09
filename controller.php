@@ -15,10 +15,13 @@ if(!empty($postData['formSerialize'])){
 switch($action){
 
   case "data-user":
-    $json = $postData;
+    //$json = $postData;
+    $json['success'] = true;
     break;
 
   default:
+    $json['error'] = true;
+    $json['errorMessage'] = 'Ação não parametrizada';
     break;
 
 }

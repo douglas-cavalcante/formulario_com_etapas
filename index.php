@@ -67,7 +67,7 @@
                     </div>
 
                     <div class="form-group">
-                        <a class="btn btn_blue" data-step="data-user"">&laquo; Anterior</a>
+                        <a class="btn btn_blue" data-step="data-user">&laquo; Anterior</a>
                         <button class="btn btn_blue" data-step="data-social">&raquo; Próximo</button>
                     </div>
 
